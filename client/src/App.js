@@ -27,13 +27,10 @@ const App = () => {
 	};
 
 	return (
-		<Router>
-			{' '}
-			<div>
-				<SavedList list={savedList} />
-				<div>Replace this Div with your Routes</div>
-			</div>
-		</Router>
+		<div>
+			<SavedList list={savedList} />
+			<div>Replace this Div with your Routes</div>
+		</div>
 	);
 };
 
