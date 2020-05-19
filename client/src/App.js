@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import SavedList from './Movies/SavedList';
 import Movies from './Movies/Movie';
 import MovieList from './Movies/MovieList';
@@ -32,7 +32,8 @@ const App = () => {
 		<Router>
 			<div>
 				<SavedList list={savedList} />
-				<div>AHHHHH!!</div>
+				<Route path="/" exact component={() => <MovieList movies={movieList} />} />
+				<Route path="/movies/:id" component={Movies} />
 			</div>
 		</Router>
 	);
